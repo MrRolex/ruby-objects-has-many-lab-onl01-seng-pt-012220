@@ -1,13 +1,14 @@
 class Artist
-  attr_accessor :name
-  @@song_count = 0
+  attr_accessor :name, :songs
+
+
   def initialize(name)
     @name = name
-    @songs = [] #empty collection of songs
   end
 
   def songs
-    @songs
+    songs.allselect do |song|
+      song.artist == artist
   end
 
   def add_song(song)
