@@ -7,8 +7,8 @@ class Artist
   end
 
   def songs
-    t |song|
-    song.artist ==artist
+    songs.allselect |song|
+    song.artist == artist
   end
 
   def add_song(song)
